@@ -10,12 +10,15 @@
 </head>
 <body>
     <div id="app">
-        <template v-if="ok">
-            <p>Hello</p>
-            <p>Good Bye</p>
-            <p>おはよう</p>
-        </template>
+        <!-- <template v-if="ok"> -->
+        <!-- </template> -->
+        <!-- <p>Good Bye</p>
+        <p>おはよう</p> -->
         <button @click="ok = !ok">ボタン</button>
+        <p v-if="ok">IF</p>
+        <!-- display noneがつく -->
+        <!-- テンプレートで使えないのと、elseとかで使えない -->
+        <p v-show="ok">Show</p>
     </div>
     <script src="main.js"></script>
 </body>
